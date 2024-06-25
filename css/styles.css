@@ -25,7 +25,14 @@ h3 {
   line-height: 1.5;
   margin: 0;
 }
-
+.heading {
+  font-size: 16rem;
+  color: #333333;
+  font-weight: 700;
+}
+.secondary--heading {
+  color: #4381ef;
+}
 a {
   text-decoration: none;
   color: #fff;
