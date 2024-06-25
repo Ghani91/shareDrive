@@ -84,7 +84,8 @@ a {
 }
 .input-group {
   padding: 2rem 3rem;
-  box-shadow: 0 0 20px 20px #7e7e7e;
+  /* box-shadow: 0 0 20px 20px #7e7e7e; */
+  filter: drop-shadow(8.485px 8.485px 14.5px rgba(21, 21, 21, 0.02));
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
@@ -137,3 +138,32 @@ a {
   transform: rotate(-90deg);
   color: var(--color-secondary);
 }
+
+/* icons */
+
+.icon-container {
+  align-items: center;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: inline-flex;
+  height: 100px;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  width: 100px;
+  position: relative;
+  z-index: 999;
+}
+.icon--white {
+  color: #fff;
+}
+/* .container-icons {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 1em;
+  overflow: hidden;
+} */
