@@ -26,7 +26,7 @@ h3 {
   margin: 0;
 }
 .heading {
-  font-size: 16rem;
+  font-size: 8rem;
   color: #333333;
   font-weight: 700;
 }
@@ -35,7 +35,7 @@ h3 {
 }
 .paragraph-text {
   font-size: 3rem;
-  line-height: 64px;
+  line-height: 1.5;
   color: #515c73;
   font-weight: 400;
 }
@@ -112,6 +112,13 @@ a {
   color: #4381ef;
   font-weight: 700;
   padding: 1rem 2rem;
+  margin-right: 2rem;
+  transition: all 0.5s;
+  text-align: center;
+}
+.badge:hover {
+  color: #fff;
+  background-color: tomato;
 }
 
 /* btns */
@@ -152,18 +159,26 @@ a {
 .icon-container {
   align-items: center;
   background-color: var(--color-primary);
-  border-radius: 50%;
+  border-radius: 100%;
   display: inline-flex;
-  height: 100px;
+  height: 90px;
   justify-content: center;
   /* margin-bottom: 3rem; */
   padding: 2rem;
-  width: 100px;
+  width: 90px;
   position: relative;
   z-index: 999;
 }
 .icon--white {
   color: #fff;
+}
+.icon--hero-block__header {
+  cursor: pointer;
+  transition: transform 1s;
+}
+.icon--hero-block__header:hover {
+  color: var(--color-primary);
+  transform: scale(1.5);
 }
 /* .container-icons {
   position: relative;
@@ -210,12 +225,13 @@ a {
 }
 /* media - card */
 .media-card {
-  border-radius: 75px;
+  border-radius: 15px;
   box-shadow: 0 0 20px 20px lightgray;
   display: flex;
   flex-direction: column;
   width: fit-content;
   padding: 4rem;
+  background-color: #fff;
 }
 
 /* building nav bar */
@@ -223,7 +239,6 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
   background-color: #f2fcfd;
   width: 100%;
   padding: 1rem 4rem;
@@ -231,4 +246,48 @@ a {
 .navbar__logo {
   height: 70px;
   cursor: pointer;
+}
+
+/* hero block */
+.grid {
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, minmax(500px, 1fr));
+    gap: 0 4rem;
+  }
+}
+.container {
+  align-content: center;
+}
+.hero-block {
+  background-color: #f2fcfd;
+  margin: 0 auto;
+  width: 100%;
+}
+.hero-block__contents {
+  background-color: #fff;
+  box-shadow: 0 0 20px 20px lightgray;
+  border-radius: 10px;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.hero-block__contents .heading,
+.hero-block__contents .paragraph-text {
+  text-align: left;
+}
+
+.hero-block__image {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 0 20px 20px lightgray;
+  align-self: flex-end;
+}
+.btn-hero-block {
+  position: absolute;
+  bottom: 0;
+  justify-self: center;
+  margin-left: 5rem;
 }
