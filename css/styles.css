@@ -68,6 +68,12 @@ a {
 }
 .list__item {
   margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+.list__item:hover,
+.list__item:hover a {
+  color: #000;
+  transform: scale(1.1);
 }
 
 .list--inline .list__item {
@@ -81,11 +87,12 @@ a {
   padding: 1rem 2rem;
   outline: 0;
   font-size: 3rem;
+  background-color: #f2fcfd;
 }
 .input-group {
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   /* box-shadow: 0 0 20px 20px #7e7e7e; */
-  filter: drop-shadow(8.485px 8.485px 14.5px rgba(21, 21, 21, 0.02));
+  box-shadow: 0 0 5px 5px lightgray;
   border-radius: 15px;
   display: flex;
   justify-content: space-between;
@@ -94,6 +101,7 @@ a {
 .icon--search {
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 /* adding badges */
@@ -208,4 +216,19 @@ a {
   flex-direction: column;
   width: fit-content;
   padding: 4rem;
+}
+
+/* building nav bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: #f2fcfd;
+  width: 100%;
+  padding: 1rem 4rem;
+}
+.navbar__logo {
+  height: 70px;
+  cursor: pointer;
 }
